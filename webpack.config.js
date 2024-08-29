@@ -3,7 +3,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: './src/index.js',
-    watch: true,
     plugins: [
         new HtmlWebpackPlugin({
             title: 'Output Management',
@@ -14,6 +13,10 @@ module.exports = {
         filename: 'main.js',
         path: path.resolve(__dirname, 'dist'),
         clean: true,
+    },
+    devtool: "eval-source-map",
+    devServer: {
+        watchFiles: ["./src/template.html"],
     },
     module: {
         rules: [
