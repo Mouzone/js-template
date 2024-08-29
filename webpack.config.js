@@ -14,9 +14,10 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         clean: true,
     },
+    // check: http://localhost:8080/ after runnning "npm run dev"
     devtool: "eval-source-map",
     devServer: {
-        watchFiles: ["./src/template.html"],
+        watchFiles: ["./src/index.html"],
     },
     module: {
         rules: [
